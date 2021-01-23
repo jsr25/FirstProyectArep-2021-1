@@ -5,11 +5,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class LinkedList implements List {
+public class LinkedList<E> implements List<E> {
+
+    private Node<E> primero=null;
+    private Node<E> ultimo=null;
+    private int size = 0;
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
@@ -24,7 +28,8 @@ public class LinkedList implements List {
 
     @Override
     public Iterator iterator() {
-        return null;
+        Iterator<E> iterator= new IteratorList<E>(primero);
+        return iterator;
     }
 
     @Override
@@ -33,8 +38,22 @@ public class LinkedList implements List {
     }
 
     @Override
-    public boolean add(Object o) {
-        return false;
+    public boolean add(E e) {
+        boolean ok=false;
+        Node<E> node = new Node<E>(e);
+        if(primero==null && ultimo==null){
+            primero = node;
+            ultimo = node;
+            size=1;
+            ok=true;
+        }
+        else{
+            ultimo.setNext(node);
+            ultimo=node;
+            size= size + 1;
+            ok=true;
+        }
+        return ok;
     }
 
     @Override
@@ -58,9 +77,15 @@ public class LinkedList implements List {
     }
 
     @Override
-    public Object get(int index) {
+    public E get(int index) {
         return null;
     }
+
+    @Override
+    public E remove(int index) {
+        return null;
+    }
+
 
     @Override
     public Object set(int index, Object element) {
@@ -72,10 +97,6 @@ public class LinkedList implements List {
 
     }
 
-    @Override
-    public Object remove(int index) {
-        return null;
-    }
 
     @Override
     public int indexOf(Object o) {
@@ -121,4 +142,5 @@ public class LinkedList implements List {
     public Object[] toArray(Object[] a) {
         return new Object[0];
     }
+
 }

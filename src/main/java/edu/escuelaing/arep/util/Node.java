@@ -1,6 +1,10 @@
 package edu.escuelaing.arep.util;
 
-
+/**
+ * Implementacion del nodo para la lsta encadenada
+ *
+ * Autor: Juan Sebastian Ramos Isaza
+ */
 public class Node<T> {
     private Node<T> next;
     private T data;

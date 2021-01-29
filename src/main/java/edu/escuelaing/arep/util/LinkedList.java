@@ -5,6 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ * Implementacion de Lista Encadenada
+ *
+ * Autor: Juan Sebastian Ramos Isaza
+ */
 public class LinkedList<E> implements List<E> {
 
     private Node<E> primero=null;

@@ -2,6 +2,11 @@ package edu.escuelaing.arep.util;
 
 import java.io.*;
 
+/**
+ * Lector de archivos
+ *
+ * Autor: Juan Sebastian Ramos Isaza
+ */
 public class Reader {
 
 

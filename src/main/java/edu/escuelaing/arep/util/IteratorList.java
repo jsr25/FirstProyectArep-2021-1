@@ -2,6 +2,12 @@ package edu.escuelaing.arep.util;
 
 import java.util.Iterator;
 
+
+/**
+ * Implementacion de Iterador para la lista encadenada
+ *
+ * Autor: Juan Sebastian Ramos Isaza
+ */
 public class IteratorList<T> implements Iterator<T> {
 
     private Node<T> actual;

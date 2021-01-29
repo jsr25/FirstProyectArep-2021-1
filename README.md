@@ -55,8 +55,20 @@ Funcionamiento de la calculadora con los datos 2
 - 38.8
 - 138.2
 
+##Arquitetura General
+
+![](img/Modelo.JPG)
+
+Como podemos notar en diagrama se generaron cinco clases fundamentales, la principal es la nombrada
+CalStat la cual es la encargada de realizar las funciones de la API creada, por otro lado también se puede
+ver LinkedList que es la implementación realizada a una lista en java, para el correcto funcionamiento básico
+de este objeto se crearon dos clases adicionales una es Node que se refiere a la abstracción del nodo de la
+lista que se desea implementar, también se generó la clase IteratorList que es la encargada de recorrer los
+elementos que se almacenen en la lista.
+
 ## Construcción 
 * [Maven](https://maven.apache.org/) - Dependencias de maven
+
 
 
 ## Autores
